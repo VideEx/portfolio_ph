@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  position: absolute;
+  right: 0;
+  /*margin-right: 100px;*/
+  width: 5px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  position: absolute;
+  right: 0;
+  background: #ffffff; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  position: absolute;
+  right: 0;
+  background-color: #2b5353; /* Цвет бегунка */
+  border-radius: 20px; /* Округление бегунка */
+  border: 1px solid #2b5353; /* Оформление границ бегунка */
+}
+
+.btn() {
+  padding: 14px 35px;
+  background: #2b5353;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: #DCDCF3;
+
+  transition: .4s;
+
+  border: 0;
+  cursor: pointer;
+
+  text-decoration: none;
+
+  &:hover {
+    background: #3b6363;
+  }
+}
+
+@font-face {
+  src: url("../../static/fonts/Jura-Regular.ttf");
+  font-family: Jura;
+}
+@font-face {
+  src: url("../../static/fonts/Jura-Light.ttf");
+  font-family: Jura-Light;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: Jura, sans-serif;
+}
+
+.header {
+  padding: 25px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__line {
+
+    height: 1px;
+    background-color: white;
+    width: 90%;
+
+    margin-top: 20px;
+  }
+}
+
+.menu {
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+
+    list-style: none;
+
+    @media (max-width: 500px) {
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 300px;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      animation: getBorderBottom .3s ease-in forwards;
+    }
+  }
+
+}
+
+.cosplay {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  &__title {
+    text-align: center;
+    color: white;
+  }
+}
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    color: #C1BBBB;
+  }
+
+  &__content {
+    max-width: 504px;
+  }
+
+  &__details {
+    margin-top: 60px;
+    max-width: 485px;
+  }
+
+  &__agree {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 14px;
+
+    input {
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
+      font-family: Museo-bold, sans-serif;
+      font-weight: 700;
+    }
+
+  }
+
+  &__group {
+    position: relative;
+    background: white;
+    border: 1px solid #C1BBBB;
+    padding: 12px 23px 13px;
+
+    width: 485px;
+    height: 74px;
+
+    font-weight: 700;
+
+    transition: .2s ease all;
+
+    @media (max-width: 500px) {
+      width: 340px;
+    }
+    @media (max-width: 340px) {
+      width: 300px;
+    }
+
+    &:focus-within {
+      border-left: 5px solid #2b5353;
+    }
+  }
+
+  &__input {
+    border: 0;
+    outline: 0;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 18px;
+    line-height: 22px;
+    color: #2b5353;
+
+    font-family: Jura-Light, sans-serif;
+
+    font-weight: 700;
+
+    @media (max-width: 500px) {
+      font-size: 12px;
+    }
+
+    &:valid {
+      margin-top: 27px;
+      height: auto;
+    }
+
+    &:focus {
+      margin-top: 27px;
+      height: auto;
+
+      ~ .form__label {
+        top: 12px;
+      }
+    }
+
+    &:not(:focus):valid {
+      ~ .form__label {
+        top: 12px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    line-height: 22px;
+    position: absolute;
+    left: 23px;
+    top: 26px;
+
+    font-family: Jura-Light, sans-serif;
+    font-weight: 100;
+
+    transition: .2s ease all;
+  }
+
+  &__button {
+
+    margin-top: 30px;
+
+    button {
+      .btn();
+      &:disabled {
+        background-color: #DCDCF3;
+        cursor: not-allowed;
+      }
+
+    }
+  }
+
+  &__link {
+
+  }
+}
+
+
+.__select {
+  position: relative;
+  width: 485px;
+  height: 74px;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 340px;
+  }
+  @media (max-width: 340px) {
+    width: 300px;
+  }
+  &[data-state="active"] {
+    .__select__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+
+    .__select__content {
+      opacity: 1;
+    }
+
+    .__select__label + .__select__input + .__select__label {
+      max-height: 74px;
+      border-top-width: 1px;
+    }
+  }
+}
+.__select__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px 23px 13px;
+
+  background-color: white;
+  //border-radius: 5px;
+  border: solid 1px #c7ccd1;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    transition: all 0.3s ease-out;
+
+    //background-color: #333333;
+
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    border-color: #2b5353;
+
+    &::before,
+    &::after {
+      background-color: #2b5353;
+    }
+  }
+}
+
+.__select__content {
+  position: absolute;
+  top: 74px;
+  left: 3px;
+
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 6px);
+
+  background-color: #ffffff;
+
+  border: 1px solid #c7ccd1;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  transition: all 0.3s ease-out;
+
+  opacity: 0;
+  z-index: 8;
+}
+.__select__input {
+  display: none;
+
+  &:checked + label {
+    background-color: #dedede;
+  }
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+.__select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0 16px;
+
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  font-family: Jura-Light, sans-serif;
+
+  & + input + & {
+    border-top: 0 solid #C7CCD160;
+  }
+
+  &:hover {
+    background-color: #2b5353 !important;
+
+    color: #ffffff;
+  }
+}
+
+@keyframes getBorderBottom {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
+}

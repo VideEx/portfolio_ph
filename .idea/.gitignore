@@ -7,12 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 
-../node_modules/
-../src/
-../static/
-../template/
-../index.html
-../package.json
-../package-lock.json
-../webpack.config.js
-../MP.png
+
+/misc.xml
