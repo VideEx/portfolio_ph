@@ -63,6 +63,10 @@ body {
 }
 
 .header {
+  width: 100vw;
+
+  background-color: #313131;
+
   padding: 25px 0;
 
   display: flex;
@@ -76,6 +80,21 @@ body {
     width: 90%;
 
     margin-top: 20px;
+
+    @media (max-width: 500px) {
+      margin: 0 0 20px;
+
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding-bottom: 15px;
+
+    position: fixed;
+    bottom: 0;
+
+    flex-direction: column-reverse;
   }
 }
 
@@ -101,6 +120,19 @@ body {
     }
   }
 
+  &__svg {
+    display: none;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 500px) {
+      display: block;
+    }
+  }
+
   &__item {
 
   }
@@ -112,6 +144,10 @@ body {
 
     &:hover {
       animation: getBorderBottom .3s ease-in forwards;
+    }
+
+    @media (max-width: 500px) {
+      display: none;
     }
   }
 
@@ -125,6 +161,8 @@ body {
   &__title {
     text-align: center;
     color: white;
+
+    padding: 15px 0;
   }
 
   &__items {
@@ -559,6 +597,7 @@ body {
   //  width: 300px;
   //}
 }
+
 .v-abs-img {
   width: 90vw;
 
