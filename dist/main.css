@@ -371,8 +371,9 @@ body {
 }
 .h-abs-img {
   width: 30vw;
+  top: 50%;
+  transform: translateY(-50%);
   left: 35vw;
-  top: 10%;
 }
 @media (max-width: 768px) {
   .h-abs-img {
@@ -388,12 +389,14 @@ body {
 }
 .v-abs-img {
   width: 50vw;
+  top: 50%;
+  transform: translateY(-50%);
   left: 25vw;
 }
 @media (max-width: 768px) {
   .v-abs-img {
     width: 70vw;
-    left: 17vw;
+    left: 15vw;
   }
 }
 @media (max-width: 500px) {
@@ -401,5 +404,35 @@ body {
     width: 90vw;
     left: 5vw;
   }
+}
+.abs-prev-arrow {
+  z-index: 1001;
+  display: none;
+  position: fixed;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: white;
+}
+.abs-prev-arrow svg {
+  width: 30px;
+}
+.abs-prev-arrow:hover {
+  cursor: pointer;
+}
+.abs-next-arrow {
+  z-index: 1001;
+  display: none;
+  position: fixed;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: white;
+}
+.abs-next-arrow svg {
+  width: 30px;
+}
+.abs-next-arrow:hover {
+  cursor: pointer;
 }
 

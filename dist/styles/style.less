@@ -489,9 +489,9 @@ body {
 
 .h-abs-img {
   width: 30vw;
+  top: 50%;
+  transform: translateY(-50%);
   left: 35vw;
-
-  top: 10%;
 
   @media (max-width: 768px) {
     width: 50vw;
@@ -502,55 +502,61 @@ body {
     width: 80vw;
     left: 10vw;
   }
-  //@media (max-width: 580px) {
-  //  width: 400px;
-  //}
-  //@media (max-width: 410px) {
-  //  width: 350px;
-  //}
-  //@media (max-width: 360px) {
-  //  width: 300px;
-  //}
 }
 
 .v-abs-img {
   width: 50vw;
+  top: 50%;
+  transform: translateY(-50%);
   left: 25vw;
 
   @media (max-width: 768px) {
     width: 70vw;
-    left: 17vw;
+    left: 15vw;
   }
 
   @media (max-width: 500px) {
     width: 90vw;
     left: 5vw;
   }
-  //@media (max-width: 860px) {
-  //  width: 750px;
-  //}
-  //@media (max-width: 760px) {
-  //  width: 730px;
-  //}
-  //@media (max-width: 740px) {
-  //  width: 700px;
-  //}
-  //@media (max-width: 710px) {
-  //  width: 650px;
-  //}
-  //@media (max-width: 660px) {
-  //  width: 550px;
-  //}
-  //@media (max-width: 560px) {
-  //  width: 500px;
-  //}
-  //@media (max-width: 510px) {
-  //  width: 400px;
-  //}
-  //@media (max-width: 410px) {
-  //  width: 360px;
-  //}
-  //@media (max-width: 370px) {
-  //  width: 320px;
-  //}
+}
+
+.abs-prev-arrow {
+  z-index: 1001;
+  display: none;
+
+  position: fixed;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  fill: white;
+
+  svg {
+    width: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.abs-next-arrow {
+  z-index: 1001;
+  display: none;
+
+  position: fixed;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+  fill: white;
+
+  svg {
+    width: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
