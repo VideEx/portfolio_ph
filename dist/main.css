@@ -40,7 +40,7 @@ body {
   font-family: Jura, sans-serif;
 }
 .header {
-  width: 100vw;
+  width: 100%;
   background-color: #313131;
   padding: 25px 0;
   display: flex;
@@ -115,40 +115,17 @@ body {
   margin: 0 auto;
 }
 .cosplay__title {
+  font-family: Jura-Light, sans-serif;
+  letter-spacing: 2px;
   text-align: center;
   color: white;
-  padding: 15px 0;
+  font-size: 30px;
+  padding: 15px 0 30px;
 }
 .cosplay__items {
   display: grid;
-  grid-gap: 5px;
+  gap: 5px;
   justify-content: center;
-  grid: repeat(8, 100px) / repeat(12, 100px);
-  grid-template-areas: "p01 p01 p01 p01 p02 p02 p04 p04 p04 p04 p05 p05" "p01 p01 p01 p01 p02 p02 p04 p04 p04 p04 p05 p05" "p01 p01 p01 p01 p03 p03 p04 p04 p04 p04 p06 p06" "p01 p01 p01 p01 p03 p03 p04 p04 p04 p04 p06 p06" "p07 p07 p09 p09 p09 p09 p10 p10 p12 p12 p12 p12" "p07 p07 p09 p09 p09 p09 p10 p10 p12 p12 p12 p12" "p08 p08 p09 p09 p09 p09 p11 p11 p12 p12 p12 p12" "p08 p08 p09 p09 p09 p09 p11 p11 p12 p12 p12 p12";
-}
-@media (max-width: 1270px) {
-  .cosplay__items {
-    grid: repeat(12, 100px) / repeat(10, 100px);
-    grid-template-areas: "p01 p01 p01 p01 p02 p02 p04 p04 p04 p04" "p01 p01 p01 p01 p02 p02 p04 p04 p04 p04" "p01 p01 p01 p01 p03 p03 p04 p04 p04 p04" "p01 p01 p01 p01 p03 p03 p04 p04 p04 p04" "p05 p05 p07 p07 p09 p09 p09 p09 p10 p10" "p05 p05 p07 p07 p09 p09 p09 p09 p10 p10" "p06 p06 p08 p08 p09 p09 p09 p09 p11 p11" "p06 p06 p08 p08 p09 p09 p09 p09 p11 p11" "p12 p12 p12 p12 . . . . . ." "p12 p12 p12 p12 . . . . . ." "p12 p12 p12 p12 . . . . . ." "p12 p12 p12 p12 . . . . . .";
-  }
-}
-@media (max-width: 1040px) {
-  .cosplay__items {
-    grid: repeat(16, 100px) / repeat(6, 100px);
-    grid-template-areas: "p01 p01 p01 p01 p02 p02" "p01 p01 p01 p01 p02 p02" "p01 p01 p01 p01 p03 p03" "p01 p01 p01 p01 p03 p03" "p04 p04 p04 p04 p05 p05" "p04 p04 p04 p04 p05 p05" "p04 p04 p04 p04 p06 p06" "p04 p04 p04 p04 p06 p06" "p07 p07 p09 p09 p09 p09" "p07 p07 p09 p09 p09 p09" "p08 p08 p09 p09 p09 p09" "p08 p08 p09 p09 p09 p09" "p10 p10 p12 p12 p12 p12" "p10 p10 p12 p12 p12 p12" "p11 p11 p12 p12 p12 p12" "p11 p11 p12 p12 p12 p12";
-  }
-}
-@media (max-width: 610px) {
-  .cosplay__items {
-    grid: repeat(22, 100px) / repeat(4, 100px);
-    grid-template-areas: "p01 p01 p01 p01" "p01 p01 p01 p01" "p01 p01 p01 p01" "p01 p01 p01 p01" "p02 p02 p03 p03" "p02 p02 p03 p03" "p04 p04 p04 p04" "p04 p04 p04 p04" "p04 p04 p04 p04" "p04 p04 p04 p04" "p05 p05 p06 p06" "p05 p05 p06 p06" "p09 p09 p09 p09" "p09 p09 p09 p09" "p09 p09 p09 p09" "p09 p09 p09 p09" "p07 p07 p08 p08" "p07 p07 p08 p08" "p12 p12 p12 p12" "p12 p12 p12 p12" "p12 p12 p12 p12" "p12 p12 p12 p12" "p10 p10 p11 p11";
-  }
-}
-@media (max-width: 410px) {
-  .cosplay__items {
-    grid: repeat(22, 70px) / repeat(4, 70px);
-    grid-template-areas: "p01 p01 p01 p01" "p01 p01 p01 p01" "p01 p01 p01 p01" "p01 p01 p01 p01" "p02 p02 p03 p03" "p02 p02 p03 p03" "p04 p04 p04 p04" "p04 p04 p04 p04" "p04 p04 p04 p04" "p04 p04 p04 p04" "p05 p05 p06 p06" "p05 p05 p06 p06" "p09 p09 p09 p09" "p09 p09 p09 p09" "p09 p09 p09 p09" "p09 p09 p09 p09" "p07 p07 p08 p08" "p07 p07 p08 p08" "p12 p12 p12 p12" "p12 p12 p12 p12" "p12 p12 p12 p12" "p12 p12 p12 p12" "p10 p10 p11 p11";
-  }
 }
 .form {
   display: flex;
@@ -254,7 +231,7 @@ body {
   background: #2b5353;
   font-size: 18px;
   line-height: 20px;
-  color: #DCDCF3;
+  color: #fff;
   transition: 0.4s;
   border: 0;
   cursor: pointer;
@@ -389,13 +366,40 @@ body {
   z-index: 999;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
 }
 .h-abs-img {
-  width: 90vw;
+  width: 30vw;
+  left: 35vw;
+  top: 10%;
+}
+@media (max-width: 768px) {
+  .h-abs-img {
+    width: 50vw;
+    left: 25vw;
+  }
+}
+@media (max-width: 500px) {
+  .h-abs-img {
+    width: 80vw;
+    left: 10vw;
+  }
 }
 .v-abs-img {
-  width: 90vw;
+  width: 50vw;
+  left: 25vw;
+}
+@media (max-width: 768px) {
+  .v-abs-img {
+    width: 70vw;
+    left: 17vw;
+  }
+}
+@media (max-width: 500px) {
+  .v-abs-img {
+    width: 90vw;
+    left: 5vw;
+  }
 }
 
